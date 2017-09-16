@@ -37,3 +37,16 @@ body, html{
     margin-left:10px;
 }
 
+.user_resp{
+    background-color: white;
+    border-radius: 20%;
+    width: 50%;
+    left: 5px;
+}
+
+.bot_resp{
+     background-color: white;
+    border-radius: 20%;
+    width: 50%;
+    right: 5px;   
+}
