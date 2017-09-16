@@ -11,9 +11,12 @@ function show() {
   var time = /(..)(:..)/.exec(new Date());     // The prettyprinted time.
   var hour = time[1] % 12 || 12;               // The prettyprinted hour.
   var period = time[1] < 12 ? 'a.m.' : 'p.m.'; // The period of the day.
+  var days = 5//number of days until assignment is dues
+  var subject = CCHU //subjeect/class of a paper
+  var type = report//assignment/report/paper to be completed
   new Notification(hour + time[2] + ' ' + period, {
-    icon: '48.png',
-    body: 'Time to make the toast.'
+    icon: 'images/icon2.png',
+    body: subjeect + ' ' + type + ' due in ' + days
   });
 }
 
@@ -41,5 +44,5 @@ if (window.Notification) {
       show();
       interval = 0;
     }
-  }, 600000);
+  }, 60000);
 }
