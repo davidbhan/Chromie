@@ -20,13 +20,10 @@ $(function(){
 
     $("#submitButton").click(function(){
         var text_req = $("#queryString").val();
-<<<<<<< HEAD
         $("#output").append($("<p class='user_resp'>" + text_req +"</p>" ));
-=======
         $("#output").append($("<p class='user_resp'>" + text_req +"</p>"));
 
             
->>>>>>> origin/master
         let promise = client.textRequest(text_req);
         promise.then(handleResponse);
 
