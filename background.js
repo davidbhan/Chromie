@@ -41,5 +41,5 @@ if (window.Notification) {
       show();
       interval = 0;
     }
-  }, 60000);
+  }, 600000);
 }
