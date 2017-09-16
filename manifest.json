@@ -12,8 +12,16 @@
     "default_popup": "popup.html",
     "default_title": "Chromie"
   },
+
+  "options_page": "options.html",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "notifications"
   ]
 }
