@@ -1,6 +1,6 @@
 $(function(){
     console.log("testing_1");
-
+    
     const client = new ApiAi.ApiAiClient({accessToken: 'd82da7b4ba744715a6c726a03b58147a'});
 
     $("#input").keyup(function(event){
@@ -10,11 +10,14 @@ $(function(){
     });
 
     $("#submitButton").click(function(){
+        var currentdate = new Date();
         var text_req = $("#queryString").val();
         $("#output").append($("<p class='user_resp'>" + text_req +"</p>"));
         let promise = client.textRequest(text_req);
         promise.then(handleResponse);
         $("#queryString").val('');
+        var objDiv = document.getElementById("output");
+        objDiv.scrollTop = objDiv.scrollHeight;
     });
 
     
@@ -25,6 +28,8 @@ $(function(){
         $("#test").text(obj);
         $("#output").append($("<p class='bot_resp'>" + bot_response + "</p>"))
         console.log(JSON.stringify(serverResponse));
+        var objDiv = document.getElementById("output");
+        objDiv.scrollTop = objDiv.scrollHeight;
         
     }
     
