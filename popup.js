@@ -1,5 +1,6 @@
 $(function(){
     console.log("testing_1");
+
     const client = new ApiAi.ApiAiClient({accessToken: 'd82da7b4ba744715a6c726a03b58147a'});
 
     $("#input").keyup(function(event){
