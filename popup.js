@@ -1,11 +1,7 @@
 $(function(){
     console.log("testing_1");
     const client = new ApiAi.ApiAiClient({accessToken: 'd82da7b4ba744715a6c726a03b58147a'});
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/master
     $("#input").keyup(function(event){
         if(event.keyCode == 13){
             $("#submitButton").click();
