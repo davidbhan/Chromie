@@ -53,20 +53,15 @@ body, html{
     height:410px;
     overflow-y:auto;
 }
+
 .user_resp{
     background-color: 	#e0f2f2;
-    border-radius: 5px 20px 20px 20px;
-    height:415px;
-    overflow-y:auto;
-}
-.user_resp{
-    background-color: 	#dddddd;
     border-radius: 20px 20px 5px 20px;
     font-size:15px; 
     padding:12px;
     float:right;
     clear:left;
-    max-width: 80%
+    max-width: 80%;
     
     
 }
@@ -78,7 +73,7 @@ body, html{
     padding:12px;
     clear:right;
     float:left;
-    max-width: 80%
+    max-width: 80%;
 
 }
 #submitButton{
