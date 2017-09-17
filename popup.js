@@ -77,7 +77,7 @@ $(function(){
             console.log(JSON.stringify(serverResponse));
             var objDiv = document.getElementById("output");
             objDiv.scrollTop = objDiv.scrollHeight;            
-        }, 400);  // The millis to wait before executing this block
+        }, 300);  // The millis to wait before executing this block
 
         console.log(JSON.stringify(serverResponse));
         var objDiv = document.getElementById("output");
@@ -85,4 +85,7 @@ $(function(){
         
     }
     
+   
+
+
 })

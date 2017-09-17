@@ -11,13 +11,20 @@ function show() {
   var time = /(..)(:..)/.exec(new Date());     // The prettyprinted time.
   var hour = time[1] % 12 || 12;               // The prettyprinted hour.
   var period = time[1] < 12 ? 'a.m.' : 'p.m.'; // The period of the day.
-  var days = 5//number of days until assignment is dues
-  var subject = CCHU //subjeect/class of a paper
-  var type = report//assignment/report/paper to be completed
-  new Notification(hour + time[2] + ' ' + period, {
+  var subject;
+  var assignment_type;
+  var date;
+  var days_left;
+  new Notification(subject + ' ' + assignment_type, {
     icon: 'images/icon2.png',
-    body: subjeect + ' ' + type + ' due in ' + days
+    body: 'Due date: ' + date + ', ' + days_left + ' days left'
+  })
+/*
+  new Notification(hour + time[2] + ' ' + period, {
+    icon: 'images/icon1.png',
+    body: 'Time to make the toast.'
   });
+*/
 }
 
 // Conditionally initialize the options.
@@ -32,7 +39,7 @@ if (window.Notification) {
   // While activated, show notifications at the display frequency.
   if (JSON.parse(localStorage.isActivated)) { show(); }
 
-  var interval = 0; // The display interval, in minutes.
+  var interval = 10; // The display interval, in minutes.
 
   setInterval(function() {
     interval++;
